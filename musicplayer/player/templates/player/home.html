@@ -45,6 +45,8 @@
         <li>
             <span>{{ song.title }} - {{ song.artist }}</span>
             <a href="{% url 'play_song' song.id %}">Play</a>
+            <a href="{% url 'upload_song' %}">Upload a Song</a>
+
         </li>
         {% endfor %}
     </ul>
