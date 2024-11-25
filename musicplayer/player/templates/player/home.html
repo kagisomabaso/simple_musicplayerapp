@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player</title>
+    <style>
+        body {
+            background-color: black;
+            color: limegreen;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: limegreen;
+            text-align: center;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        li {
+            background-color: #222;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        a {
+            color: limegreen;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Music Library</h1>
+    <ul>
+        {% for song in songs %}
+        <li>
+            <span>{{ song.title }} - {{ song.artist }}</span>
+            <a href="{% url 'play_song' song.id %}">Play</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

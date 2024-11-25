@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Now Playing: {{ song.title }}</title>
+    <style>
+        body {
+            background-color: black;
+            color: limegreen;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: limegreen;
+            margin-bottom: 20px;
+        }
+        audio {
+            margin-top: 20px;
+            border: 2px solid limegreen;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: #222;
+            color: limegreen;
+        }
+        audio::-webkit-media-controls-panel {
+            background-color: #222;
+            color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Now Playing: {{ song.title }}</h1>
+    <h2>Artist: {{ song.artist }}</h2>
+    <audio controls autoplay>
+        <source src="{{ song.audio_file.url }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
