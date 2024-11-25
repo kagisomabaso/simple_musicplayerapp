@@ -5,18 +5,29 @@ A simple yet powerful music player web application built with Django. This app a
 🌟 Features
 
 User Authentication: Secure user registration, login, and management of uploaded songs.
+
 File Upload: Upload and store music files (e.g., MP3) via the admin panel or user interface.
+
 Media Streaming: Stream audio files directly using HTML5 <audio> controls.
+
 Dynamic Playlists: Create and manage personalized playlists.
+
 Search Functionality: Quickly find songs by title or artist.
+
 Responsive Design: Optimized for both desktop and mobile browsers.
+
+
 
 🛠️ Tech Stack
 
 Backend: Django Framework
+
 Frontend: HTML5, CSS3, JavaScript
+
 Database: SQLite (default, easily switchable to PostgreSQL or MySQL)
+
 File Storage: Django’s FileField with local media storage
+
 Deployment: Compatible with platforms like Heroku, AWS, or PythonAnywhere.
 
 
